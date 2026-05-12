@@ -41,7 +41,31 @@ The smoothing step proved critical — reducing noise-induced false alarms while
 *Three sensor signals monitored over 500 minutes. Red dots = detected anomalies. Red dashed line = automatic alert trigger.*
  
 ---
+## Getting Started
  
+### Prerequisites
+Make sure you have Python 3 installed with the following libraries :
+```
+pip install pandas numpy matplotlib jupyter
+```
+### Run the project
+```bash
+# 1. Clone the repository
+git clone https://github.com/YOUR_USERNAME/bioprocess-anomaly-detection.git
+ 
+# 2. Navigate into the folder
+cd bioprocess-anomaly-detection
+ 
+# 3. Launch Jupyter
+jupyter notebook
+ 
+# 4. Open and run
+Bioprocess_Anomaly_Detection.ipynb
+```
+Run all cells from top to bottom — no external dataset required, data is generated directly in the notebook.
+ 
+---
+
 ## Tech stack
  
 | Tool | Usage |
@@ -59,7 +83,9 @@ The smoothing step proved critical — reducing noise-induced false alarms while
 bioprocess-anomaly-detection/
 │
 ├── Bioprocess_Anomaly_Detection.ipynb   # Main notebook
-└── README.md
+├── anomaly_detection.png                # Sample output chart
+├── README.md                            # Project documentation
+└── LICENSE                              # MIT License
 ```
  
 ---
@@ -74,10 +100,35 @@ Simulated data was generated based on standard operating parameters for mammalia
 Anomalies were designed to simulate plausible process failures encountered in industrial bioproduction environments.
  
 ---
+
+ ## Limitations
  
+- **Simulated data only** — the model has not been validated against real bioreactor sensor data. Results may differ with real-world noise patterns and process variability.
+- **Fixed thresholds** — normal ranges are hardcoded based on literature values. In practice, thresholds should be calibrated per process and cell line.
+- **Single batch analysis** — the current approach does not account for batch-to-batch variability, which is a key challenge in industrial bioproduction.
+- **No multivariate detection** — anomalies are detected per sensor independently. Combined parameter drifts (e.g. simultaneous pH drop and DO decrease) could be more precisely characterized through multivariate methods.
+  
+---
+ 
+## Future Work
+ 
+-  Validate the approach on real bioreactor datasets (e.g. from public repositories or lab data)
+-  Implement adaptive thresholds that adjust dynamically based on historical batch data
+-  Explore multivariate anomaly detection methods (e.g. PCA, Isolation Forest)
+-  Build an interactive real-time dashboard using Plotly or Streamlit
+-  Extend the model to multi-batch analysis for batch-to-batch comparison
+
+---
+
 ## About
  
 Built as a first personal data science project alongside a bioproduction engineering program.  
 The goal was to bridge domain knowledge in bioprocesses with practical data analysis skills.
  
 **Lucas Lacombe** — Pharmacy student  
+
+---
+
+## License
+ 
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
