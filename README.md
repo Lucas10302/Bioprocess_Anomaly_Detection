@@ -1,4 +1,4 @@
-# 🧬 Bioreactor Anomaly Detection
+# Bioreactor Anomaly Detection
  
 > Monitoring a fed-batch bioprocess in real time — detecting drifts before they become failures.
  
@@ -27,8 +27,8 @@ Starting from simulated sensor data representing a typical fed-batch bioreactor,
  
 | Method | First anomaly detected |
 |---|---|
-| Raw signal (threshold) | t = 146 min ⚠️ false positive |
-| Smoothed signal (rolling mean) | t = 352 min ✅ accurate |
+| Raw signal (threshold) | t = 146 min false positive |
+| Smoothed signal (rolling mean) | t = 352 min accurate |
  
 The smoothing step proved critical — reducing noise-induced false alarms while preserving sensitivity to genuine drifts.
  
