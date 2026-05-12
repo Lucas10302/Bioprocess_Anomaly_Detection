@@ -25,8 +25,9 @@ In the biopharmaceutical industry, losing a batch due to contamination or equipm
 ## Results
 The algorithm successfully ignored natural fluctuations (noise) and triggered the alarm at **t = 352 min**, only 2 minutes after the actual anomaly started.
 
-*Sample output from the detection script:*
-**CRISIS REPORT**
+###Sample output from the detection script:###
+
+**CRISIS REPORT**: 
 Alert Timestamp: 352 min
 Diagnosis: pH Drift (Potential Contamination?)
 Values at detection: pH=6.73, Temp=37.02°C
