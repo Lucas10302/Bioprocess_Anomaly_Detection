@@ -106,15 +106,15 @@ Anomalies were designed to simulate plausible process failures encountered in in
 - **Simulated data only** — the model has not been validated against real bioreactor sensor data. Results may differ with real-world noise patterns and process variability.
 - **Fixed thresholds** — normal ranges are hardcoded based on literature values. In practice, thresholds should be calibrated per process and cell line.
 - **Single batch analysis** — the current approach does not account for batch-to-batch variability, which is a key challenge in industrial bioproduction.
-- **No multivariate detection** — anomalies are detected per sensor independently. Combined parameter drifts (e.g. simultaneous pH drop and DO decrease) could be more precisely characterized through multivariate methods.
+- **No multivariate detection** — anomalies are detected per sensor independently. Combined parameter drifts could be more precisely characterized through multivariate methods.
   
 ---
  
 ## Future Work
  
--  Validate the approach on real bioreactor datasets (e.g. from public repositories or lab data)
+-  Validate the approach on real bioreactor datasets 
 -  Implement adaptive thresholds that adjust dynamically based on historical batch data
--  Explore multivariate anomaly detection methods (e.g. PCA, Isolation Forest)
+-  Explore multivariate anomaly detection methods 
 -  Build an interactive real-time dashboard using Plotly or Streamlit
 -  Extend the model to multi-batch analysis for batch-to-batch comparison
 
